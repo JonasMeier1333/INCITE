@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqhikarta34hb"
+path="res://.godot/imported/Wood Run 2.wav-da183837a26e59be57992875e658b9c9.sample"
+
+[deps]
+
+source_file="res://assets/sound_effects/player sounds/Wood Run 2.wav"
+dest_files=["res://.godot/imported/Wood Run 2.wav-da183837a26e59be57992875e658b9c9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

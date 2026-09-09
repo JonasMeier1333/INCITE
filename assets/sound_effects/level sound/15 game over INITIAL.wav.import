@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gynoi38mt2ls"
+path="res://.godot/imported/15 game over INITIAL.wav-680a179afcf417d896d3541554fb8efc.sample"
+
+[deps]
+
+source_file="res://assets/sound_effects/level sound/15 game over INITIAL.wav"
+dest_files=["res://.godot/imported/15 game over INITIAL.wav-680a179afcf417d896d3541554fb8efc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

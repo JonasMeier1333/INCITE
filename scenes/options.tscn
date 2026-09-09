@@ -1,0 +1,123 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvt35250g7yo"]
+
+[ext_resource type="Script" uid="uid://dk186eced5qk2" path="res://scripts/options.gd" id="1_2iy26"]
+[ext_resource type="Texture2D" uid="uid://c2c2kmiho2lsw" path="res://assets/sprites 2/Main Menu/Incite.png" id="1_yjkok"]
+[ext_resource type="FontFile" uid="uid://db0vyesjqbq" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_2iy26"]
+[ext_resource type="AudioStream" uid="uid://7b4knkbth6cj" path="res://assets/sound_effects/level sound/10 world map INITIAL.wav" id="4_kv8mn"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2iy26")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -216.0
+offset_right = 384.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yjkok")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -112.0
+offset_right = 216.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Musik" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Musik" type="Label" parent="MarginContainer/VBoxContainer/Musik"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 64
+text = "Musik"
+
+[node name="HSlider_musik" type="HSlider" parent="MarginContainer/VBoxContainer/Musik"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="Ambient" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Ambient" type="Label" parent="MarginContainer/VBoxContainer/Ambient"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 64
+text = "Ambient"
+
+[node name="HSlider_ambient" type="HSlider" parent="MarginContainer/VBoxContainer/Ambient"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="SFX" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="SFX" type="Label" parent="MarginContainer/VBoxContainer/SFX"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 64
+text = "Sfx"
+
+[node name="HSlider_sfx" type="HSlider" parent="MarginContainer/VBoxContainer/SFX"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="Controlls" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 64
+text = "Controlls"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 64
+text = "Go Back"
+
+[node name="background options" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_kv8mn")
+volume_db = -15.0
+autoplay = true
+bus = &"Music "
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Musik/HSlider_musik" to="." method="_on_h_slider_musik_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Ambient/HSlider_ambient" to="." method="_on_h_slider_ambient_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/SFX/HSlider_sfx" to="." method="_on_h_slider_sfx_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controlls" to="." method="_on_controlls_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

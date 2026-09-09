@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce7v76l4ralkx"]
+
+[ext_resource type="Script" uid="uid://dknqdqnsrtoww" path="res://scripts/options_menu.gd" id="1_ijpji"]
+[ext_resource type="FontFile" uid="uid://ekgo7xqfe55n" path="res://assets/fonts/PixelOperator8.ttf" id="1_liyum"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ijpji")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 101.0
+offset_bottom = 64.0
+
+[node name="Music" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Music"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_liyum")
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer/Music"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+min_value = -30.0
+max_value = 0.0
+
+[node name="SFX" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SFX"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_liyum")
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="VBoxContainer/SFX"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+min_value = -30.0
+max_value = 0.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 218.0
+offset_right = 101.0
+offset_bottom = 242.0
+theme_override_fonts/font = ExtResource("1_liyum")
+text = "Go Back"
+
+[connection signal="drag_ended" from="VBoxContainer/Music/MusicSlider" to="." method="_on_h_slider_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/Music/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/Music/MusicSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/SFX/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/SFX/SFXSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dagosd81sepch"]
+
+[ext_resource type="Script" uid="uid://dhnpwqctvhhkh" path="res://scripts/killzone.gd" id="1_xlapc"]
+[ext_resource type="AudioStream" uid="uid://ba38b8mwcrxyf" path="res://assets/sound_effects/player sounds/damaged3.wav" id="2_kl8fp"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xlapc"]
+distance = -2.0
+
+[node name="Killzone" type="Area2D"]
+collision_layer = 23
+collision_mask = 23
+script = ExtResource("1_xlapc")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_xlapc")
+
+[node name="death sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_kl8fp")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

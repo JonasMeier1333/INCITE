@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=3 uid="uid://cudh2ufiju4f5"]
+
+[ext_resource type="Texture2D" uid="uid://dbd3m212vtfrx" path="res://assets/sprites 2/tileset_neu.png" id="2_8gyot"]
+[ext_resource type="PackedScene" uid="uid://ck7an7ll7wqu4" path="res://scenes/knight.tscn" id="2_fs6u6"]
+[ext_resource type="Texture2D" uid="uid://br34bquxqci3h" path="res://assets/sprites 2/ts2.png" id="3_8gyot"]
+[ext_resource type="PackedScene" uid="uid://fgvjlodbi5bc" path="res://scenes/robot.tscn" id="5_rdeyk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d1ovk"]
+texture = ExtResource("2_8gyot")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.9117851, -16, 16, -16, 16, 8.921661, -0.63726425, 5.7353554)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 8.284401, -16, 7.6471367)
+0:1/0 = 0
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.8676758, -16, 16, -16, 16, 16, 3.5049362, 16)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -11.470709, -16, -11.789339, 18.799213, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.7353554, -2.8676777, 5.4167213, -0.63726425, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -4.1422005, -16, -4.4608307)
+2:2/0 = 0
+3:2/0 = 0
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.416725, -9.240292, 16, -9.240292, 16, 16, -5.7353554, 16)
+5:2/0/physics_layer_1/polygon_0/points = PackedVector2Array(4.3015175, -5.4167233, 16, -5.098091, 16, 16, 0.47794724, 16, 0.47794724, 3.186306)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.7353554, -16, -16, 0.63726044, -16, -0.63726425, 16, -16, 16)
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.345623, -16, 16, -16, 16, 16, -3.6642532, 16)
+5:3/0/physics_layer_1/polygon_0/points = PackedVector2Array(-2.0710983, -16, 16, -16, 16, 16, -2.0710983, 16)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 1.9117813, -16, 4.1421967, -7.6471386, 16, -6.0539837, 16, 16, -16, 16)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -10.196184, 16, -9.877554, 16, 16, -16, 16)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -10.196184, 16, -9.877554, 16, 16, -16, 16)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -10.196184, 16, -9.877554, 16, 16, -16, 16)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.416725, -16, 16, -16, 16, 16, -5.7353554, 16)
+5:4/0/physics_layer_1/polygon_0/points = PackedVector2Array(-2.0710983, -16, 16, -16, 16, 16, -2.0710983, 16)
+0:5/0 = 0
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.63726044, -16, 16, -16, 16, 16, 1.2745209, 13.382492)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 0.31863022, -0.31863403, 0.95589066, -8.284401, 7.9657707, -16, 16)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 6.053982, -16, 5.7353516, 0.31863022, -16, 1.9117851)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -1.9117851, 16, -0.95589256, 16, 16, -16, 16)
+4:5/0/physics_layer_1/polygon_0/points = PackedVector2Array(-10.99276, 0.31863022, 16, 0.31863022, 16, 16, -16, 16, -16, 5.098091)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -3.186308, -2.2304173, -3.5049381, 2.8676758, -16, 16, -16, 16, 16, -16, 16)
+5:5/0/physics_layer_1/polygon_0/points = PackedVector2Array(-2.0710983, -16, 16, -16, 16, 16, -0.79657745, 16, -16, 16, -16, 2.5490456, -5.5760384, 2.5490456, -2.3897285, -2.5490456)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iw0dt"]
+texture = ExtResource("3_8gyot")
+texture_region_size = Vector2i(32, 32)
+17:12/0 = 0
+17:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+17:12/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+22:12/0 = 0
+22:14/0 = 0
+22:15/0 = 0
+22:17/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_iw0dt"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 3
+sources/0 = SubResource("TileSetAtlasSource_d1ovk")
+sources/1 = SubResource("TileSetAtlasSource_iw0dt")
+
+[node name="story level 1" type="Node2D"]
+
+[node name="knight" parent="." instance=ExtResource("2_fs6u6")]
+position = Vector2(107, 163)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-2, 0)
+tile_set = SubResource("TileSet_iw0dt")
+format = 2
+layer_0/tile_data = PackedInt32Array(262152, 262144, 5, 262153, 327680, 5, 327688, 262144, 536870917, 327689, 327680, 536870917, 393225, 196608, 1, 458761, 196608, 1, 196617, 327680, 4, 131081, 327680, 4, 65545, 327680, 3, 9, 327680, 3, -65527, 327680, 3, -131063, 327680, 3, -196599, 327680, 3, -196602, 327680, 268435459, -131066, 327680, 268435459, -65530, 327680, 268435459, 6, 327680, 268435459, 65542, 327680, 268435459, 327681, 131072, 4, 393217, 65536, 5, 458753, 196608, 1, 524289, 196608, 1, 327682, 131072, 4, 393218, 131072, 5, 458754, 262144, 1, 524290, 262144, 1, 327683, 131072, 4, 393219, 131072, 536870916, 327684, 131072, 4, 393220, 131072, 536870916, 327685, 196608, 4, 393221, 196608, 536870916, -262135, 327680, 2, -262134, 131072, 4, -262133, 131072, 4, -262132, 131072, 4, -262131, 131072, 4, -262130, 131072, 4, -262129, 131072, 4, -262128, 131072, 4, -262127, 131072, 4, -262126, 131072, 4, -262125, 131072, 4, -327674, 327680, 268435459, -262138, 327680, 268435459, -393210, 327680, 268435458)
+
+[node name="robot" parent="." instance=ExtResource("5_rdeyk")]
+position = Vector2(503, -120)

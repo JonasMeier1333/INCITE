@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgyiolr2w7lqv"]
+
+[ext_resource type="Texture2D" uid="uid://o74unijgrdrx" path="res://assets/sprites 2/hud elements/hb casing (3).png" id="1_6fi6k"]
+[ext_resource type="Texture2D" uid="uid://dbhgoi77ikfl3" path="res://assets/sprites 2/hud elements/hb full.png" id="2_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://dd80admjmiy4n" path="res://assets/sprites 2/hud elements/sb casing (3).png" id="3_047uy"]
+[ext_resource type="Texture2D" uid="uid://bsfjcyiqxnylu" path="res://assets/sprites 2/hud elements/sb full.png" id="4_5pdws"]
+
+[node name="HUD" type="CanvasLayer"]
+offset = Vector2(-32, -115)
+scale = Vector2(4, 4)
+transform = Transform2D(4, 0, 0, 4, -32, -115)
+
+[node name="Health bar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+max_value = 117.0
+value = 100.0
+texture_under = ExtResource("1_6fi6k")
+texture_progress = ExtResource("2_uo2fv")
+texture_progress_offset = Vector2(0, 25)
+
+[node name="Stamina bar" type="TextureProgressBar" parent="."]
+offset_left = 0.25
+offset_top = 0.75
+offset_right = 145.25
+offset_bottom = 145.75
+max_value = 117.0
+value = 100.0
+texture_under = ExtResource("3_047uy")
+texture_progress = ExtResource("4_5pdws")
+texture_progress_offset = Vector2(0, 25)

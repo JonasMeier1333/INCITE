@@ -1,0 +1,95 @@
+[gd_scene load_steps=18 format=3 uid="uid://d2dh501223jcf"]
+
+[ext_resource type="Texture2D" uid="uid://c8605wovray32" path="res://assets/sprites 2/bonfire/F500-1.PNG" id="1_q02cd"]
+[ext_resource type="Script" uid="uid://4807q4sfulqp" path="res://scripts/bonfire.gd" id="1_w0m7f"]
+[ext_resource type="Texture2D" uid="uid://biuie3sgqqhs8" path="res://assets/sprites 2/bonfire/F500-2.PNG" id="2_utcrh"]
+[ext_resource type="Texture2D" uid="uid://doph88mnaktk1" path="res://assets/sprites 2/bonfire/F500-3.PNG" id="3_w0m7f"]
+[ext_resource type="Texture2D" uid="uid://se8c5p18i12c" path="res://assets/sprites 2/bonfire/F500-4.PNG" id="4_dt6jo"]
+[ext_resource type="Texture2D" uid="uid://djljfag024rlh" path="res://assets/sprites 2/bonfire/F500-5.PNG" id="5_q7rqk"]
+[ext_resource type="Texture2D" uid="uid://cgrvohqhaibvp" path="res://assets/sprites 2/bonfire/F500-6.PNG" id="6_8cyd2"]
+[ext_resource type="Texture2D" uid="uid://dcoerqf1ea85d" path="res://assets/sprites 2/bonfire/F500-7.PNG" id="7_bbryt"]
+[ext_resource type="Texture2D" uid="uid://b3nqnuy0ngtws" path="res://assets/sprites 2/bonfire/F500-8.PNG" id="8_afdtb"]
+[ext_resource type="Texture2D" uid="uid://dw6aux3fdgdx4" path="res://assets/sprites 2/bonfire/F500-9.PNG" id="9_j077j"]
+[ext_resource type="Texture2D" uid="uid://cacffbxcpa21q" path="res://assets/sprites 2/bonfire/F500-10.PNG" id="10_1jl7a"]
+[ext_resource type="Texture2D" uid="uid://c330cymnsofyx" path="res://assets/sprites 2/bonfire/F500-11.PNG" id="11_7tbkx"]
+[ext_resource type="Texture2D" uid="uid://b47ikkuvr425v" path="res://assets/sprites 2/bonfire/F500-12.PNG" id="12_frlos"]
+[ext_resource type="FontFile" uid="uid://db0vyesjqbq" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="14_dt6jo"]
+[ext_resource type="AudioStream" uid="uid://dhbj72ikkq3xj" path="res://assets/sound_effects/level sound/bonfire.wav" id="15_dt6jo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pmblh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_q02cd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_utcrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w0m7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dt6jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q7rqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8cyd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bbryt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_afdtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j077j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1jl7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7tbkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_frlos")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q02cd"]
+radius = 456.21487
+
+[node name="Bonfire" type="Area2D"]
+script = ExtResource("1_w0m7f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pmblh")
+autoplay = "default"
+frame = 5
+frame_progress = 0.4035915
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q02cd")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -255.0
+offset_top = -212.0
+offset_right = 248.0
+offset_bottom = -146.0
+theme_override_fonts/font = ExtResource("14_dt6jo")
+theme_override_font_sizes/font_size = 65
+text = "E to Rest"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_dt6jo")
+volume_db = -10.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

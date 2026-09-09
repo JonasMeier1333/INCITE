@@ -1,0 +1,189 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcffjdcfkiniq"]
+
+[ext_resource type="Texture2D" uid="uid://c2c2kmiho2lsw" path="res://assets/sprites 2/Main Menu/Incite.png" id="1_qj3aw"]
+[ext_resource type="Script" uid="uid://ojbnoeshhvq8" path="res://scripts/controlls.gd" id="1_x3d0u"]
+[ext_resource type="FontFile" uid="uid://db0vyesjqbq" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_x3d0u"]
+[ext_resource type="AudioStream" uid="uid://7b4knkbth6cj" path="res://assets/sound_effects/level sound/10 world map INITIAL.wav" id="3_ude2o"]
+
+[node name="Controlls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x3d0u")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -216.0
+offset_right = 384.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qj3aw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -112.0
+offset_right = 216.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "A"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = ":"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "Move Left"
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "D"
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = ":"
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "Move Right"
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "Space"
+
+[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = ":"
+
+[node name="Label9" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "Jump"
+
+[node name="Label10" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "Shift"
+
+[node name="Label11" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = ":"
+
+[node name="Label12" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "Dash"
+
+[node name="Label13" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "E"
+
+[node name="Label14" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = ":"
+
+[node name="Label15" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "Use"
+
+[node name="Label16" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "LMB"
+
+[node name="Label17" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = ":"
+
+[node name="Label18" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "Attack"
+
+[node name="Label19" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "LMB Hold"
+
+[node name="Label20" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = ":"
+
+[node name="Label21" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 48
+text = "Heavy Attack"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3d0u")
+theme_override_font_sizes/font_size = 64
+text = "Go Back"
+
+[node name="background options" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ude2o")
+volume_db = -15.0
+autoplay = true
+bus = &"Music "
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
