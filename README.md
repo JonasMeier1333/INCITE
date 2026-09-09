@@ -2,7 +2,7 @@
 
 **Incite** ist mein erstes eigenständiges Softwareprojekt – ein 2D-Platformer, der von Grund auf in der **Godot Engine** entwickelt wurde. 
 
-Dieses Repository dient als Praxisreferenz für meine Programmierkenntnisse und ist Teil meiner Bewerbung für das **Duale Studium Informatik / Künstliche Intelligenz (B.Sc.)** bei der Mercedes-Benz AG.
+Dieses Repository dient als Praxisreferenz für meine Programmierkenntnisse und ist Teil meiner Bewerbung.
 
 ## 🚀 Kernfunktionen (Key Features)
 
