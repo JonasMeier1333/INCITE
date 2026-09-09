@@ -6,8 +6,8 @@ Dieses Repository dient als Praxisreferenz für meine Programmierkenntnisse und 
 
 ## 🚀 Kernfunktionen (Key Features)
 
-* **Eigene Kampfmechaniken:** Ein vollständig selbst geschriebenes, responsives Kampfsystem, das präzises Timing, Hitbox-Management und State-Handling erfordert.
-* **Gegner-Pathfinding (KI):** Implementierung von Wegfindungs-Algorithmen, durch die sich Gegner dynamisch in der Spielumgebung orientieren und den Spieler strategisch verfolgen können.
+* **Eigene Kampfmechaniken:** Ein responsives Kampfsystem, das präzises Timing und Hitbox-Management und erfordert.
+* **Gegner-Pathfinding :** Implementierung von Wegfindungs-Algorithmen, durch die sich Gegner dynamisch in der Spielumgebung orientieren und den Spieler verfolgen können.
 * **Physik & Movement:** Flüssiges 2D-Platforming, Kollisionsabfragen und angepasste Schwerkraft für ein optimales Spielgefühl.
 
 ## 🧠 Lernprozess & Moderne Problemlösung
@@ -19,13 +19,8 @@ Ein besonderer Fokus lag auf der **Zusammenarbeit von Mensch und KI**: Bei kompl
 ## 🛠️ Technologie-Stack
 * **Engine:** Godot Engine
 * **Programmiersprache:** GDScript (Objektorientiert)
-* **Konzepte:** Pathfinding, Finite State Machines (FSM), Signal-basiertes Event-Handling, Kinematic Bodies.
+* **Konzepte:** Pathfinding, Signal-basiertes Event-Handling, Kinematic Bodies.
 
-## ⚙️ Wie man das Projekt öffnet
-1. [Godot Engine](https://godotengine.org/) (Version 3.x / 4.x - *hier anpassen*) herunterladen.
-2. Dieses Repository klonen oder als ZIP herunterladen.
-3. Den Godot-Projektmanager öffnen, auf "Importieren" klicken und die `project.godot` Datei aus diesem Ordner auswählen.
-4. Das Spiel mit `F5` (oder dem Play-Button) starten.
 
 ---
 *Entwickelt von Jonas Meier im Jahr 2026*
